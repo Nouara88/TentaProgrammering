@@ -1,12 +1,9 @@
+
 package inlamning;
 
-import static org.junit.Assert.assertEquals;
-
-import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
-import testperson.Person;
 
-import java.util.Scanner;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class MyTest {
