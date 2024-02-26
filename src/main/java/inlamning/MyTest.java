@@ -1,49 +1,54 @@
+package TestautomatiseringOchProgrammering.inlämningsuppgift;
 
-package inlamning;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class MyTest {
 
-    @Test
+  @Test
     public void testHto4stars() {
+        //PRINTER läser in text med scanner
+        //Skickar texten till Translator
+        //Translator skickar tillbaka morse
+        //Printer skriver ut morse
 
-        TestTranslator translator = new TestTranslator();
+        Translator translator = new Translator();
 
         String testdata = "H";
 
         String expected = "****";
 
-        String actual = TestTranslator.getMorse(testdata);
+        String actual = translator.getMorse(testdata);
 
         assertEquals(expected, actual);
 
     }
 
     @Test
-    public void testNullInputHandling() {
+    public void testInvalidInputHandling() {
 
-        TestTranslator translator = new TestTranslator();
+        Translator translator = new Translator();
 
-        String testInput = " ";
+        String testInput = "";
 
-        translator.handleInput(testInput);
+        String result = translator.handleInput(testInput);
+
+        assertEquals("Null input or empty string detected.", result);
     }
 
     @Test
 
     public void testMoToN() {
 
-        TestTranslator translator = new TestTranslator();
+        Translator translator = new Translator();
 
         String testdata = "-*";
 
         String expected = "N";
 
-        String actual = TestTranslator.getEng(testdata);
+        String actual = Translator.getEng(testdata);
 
         assertEquals(expected, actual);
     }}
