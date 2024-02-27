@@ -117,24 +117,8 @@ public class Translator {
             return null;
         }
         return " ";
-    }
+    }}
 
-    public String getMorse(String testdata) {
-        return "****";
-    }
-
-
-    public String handleInput(String testInput) {
-        if (testInput.isEmpty())
-            return "Null input or empty string detected.";
-        return null;
-    }
-
-    public static String getEng(String testdata) {
-        return "N";
-    }
-
-}
 
 
 
