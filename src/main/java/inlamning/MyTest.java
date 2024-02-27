@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 public class MyTest {
 
-  @Test
+    @Test
     public void testHto4stars() {
         //PRINTER läser in text med scanner
         //Skickar texten till Translator
@@ -20,22 +20,22 @@ public class MyTest {
 
         String expected = "****";
 
-        String actual = translator.getMorse(testdata);
+        String actual = translator.getEngToMorseTranslator(testdata);
 
         assertEquals(expected, actual);
 
     }
 
     @Test
-    public void testInvalidInputHandling() {
+    public void testUserInputIsEmpty() {
 
-        Translator translator = new Translator();
+        Printer printer = new Printer();
 
-        String testInput = "";
+        String userInput = "";
 
-        String result = translator.handleInput(testInput);
+        String result = printer.handleInput(userInput);
 
-        assertEquals("Null input or empty string detected.", result);
+        assertEquals(null, result);
     }
 
     @Test
@@ -48,8 +48,9 @@ public class MyTest {
 
         String expected = "N";
 
-        String actual = Translator.getEng(testdata);
+        String actual = translator.getMorToEngTranslator(testdata);
 
         assertEquals(expected, actual);
-    }}
+    }
+}
 
