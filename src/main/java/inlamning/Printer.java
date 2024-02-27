@@ -78,4 +78,9 @@ public class Printer {
             }
         }
     }
-}
+
+    public static String handleInput(String userInput) {
+        if(userInput.isEmpty()) {
+
+        } return null;
+}}
